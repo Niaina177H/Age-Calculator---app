@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+  <div id="root">
+    <div id="content">
+      <form>
+        <label for="day">day<br>
+          <input type="text" placeholder="DD" id="day">
+          <div class="info">
+            <p class="msg-danger default required">This field is required</p>
+            <p class="msg-danger default valid">Must be a valid day</p>
+            <p class="msg-danger default validate">Must be a valid date</p>
+          </div>
+        </label>
+        <label for="month">month<br>
+          <input type="text" placeholder="MM" id="month">
+          <div class="info">
+            <p class="msg-danger default required">This field is required</p>
+            <p class="msg-danger default valid">Must be a valid month</p>
+          </div>
+        </label>
+        <label for="year">year<br>
+          <input type="text" placeholder="YYYY" id="year">
+          <div class="info">
+            <p class="msg-danger default required">This field is required</p>
+            <p class="msg-danger default valid">Must be a in the past</p>
+          </div>
+        </label>
+        <div id="btn">
+          <hr><button><img src="./assets/images/icon-arrow.svg" width="20px" height="20px"></button>
+        </div>
+      </form>
+      <div id="age">
+        <p><span>- - </span>years<br>
+        <span>- - </span>months<br>
+        <span>- - </span>days</p>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Niaina</a>.
+    </div>
+  </div>
+</body>
+</html>

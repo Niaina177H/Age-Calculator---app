@@ -1,0 +1,202 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+:root{
+  --purple: hsl(259, 100%, 65%);
+  --light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+@font-face{
+  font-family: Poppins;
+  src: url("./assets/fonts/Poppins-regular.ttf");
+}
+@font-face{
+  font-family: Poppins-Bold;
+  src: url("./assets/fonts/Poppins-Bold.ttf");
+}
+@font-face{
+  font-family: Poppins-ExtraBold;
+  src: url("./assets/fonts/Poppins-ExtraBold.ttf");
+}
+@font-face{
+  font-family: Poppins-ExtraBoldI;
+  src: url("./assets/fonts/Poppins-ExtraBoldItalic.ttf");
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  transition: .5s;
+}
+body{
+  background-color: var(--Off-white);
+  font-family: Poppins;
+}
+#content{
+  background-color: var(--White);
+  border: 1px solid var(--White);
+  border-radius: 20px 20px 100px 20px;
+}
+form input{
+  border: 1px solid var(--Light-grey);
+  border-radius: 6px;
+  height: 60px;
+  padding-left: 3px;
+  font-size: 32px;
+  color: var(--Off-black);
+  font-family: Poppins-bold;
+  font-variant: small-caps;
+}
+form input:focus{
+  border: .6px solid var(--Off-black);
+}
+form input:active{
+  border: .6px solid var(--Off-black);
+}
+form{
+  display: grid;
+}
+form label{
+  text-transform: uppercase;
+  color: var(--Smokey-grey);
+  height: 80px;
+}
+form div{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div hr{
+  position: relative;
+  border: none;
+  width: 85%;
+  height: 1px;
+  background-color: var(--Light-grey);
+}
+div button{
+  position: absolute;
+}
+div p>span{
+  color: var(--purple);
+}
+button{
+  border-radius: 50%;
+  border: none;
+  background-color: var(--purple);
+}
+button:hover{
+  background-color: var(--Off-black);
+}
+#age{
+  padding-left: 20px;
+  margin-bottom: 18px;
+}
+div p{
+  font-family: Poppins-ExtraBoldI;
+  font-size: 42px;
+  color: var(--Off-black);
+}
+div p>span{
+  font-family: Poppins-ExtraBold;
+}
+
+@media (300px <= width < 500px){
+  form div{
+    text-align: center;
+  }
+  #content{
+    margin: 80px 3%;
+    padding: 10px 10px;
+  }
+  form input{
+    width: 90%;
+  }
+  form{
+    padding-top: 30px;
+    grid-template-columns: repeat(3, 3fr);
+    grid-template-rows: repeat(2, 90px);
+    margin-bottom: 30px;
+  }
+  form div{
+    margin-top: 23px;
+  }
+  form label{
+    padding-left: 6px;
+  }
+  div button{
+    height: 50px;
+    width: 50px;
+  }
+}
+@media (width >= 500px){
+  #root{
+    overflow: hidden;
+  }
+  #content{
+    width: 490px;
+    margin: 10% auto;
+    margin-bottom: 6%;
+    padding-left: 4%;
+  }
+  form{
+    grid-template-columns: repeat(3, 28%);
+    grid-template-rows: repeat(2, 2fr);
+    height: 50%;
+    width: 96%;
+    padding-top: 6%;
+  }
+  form input{
+    width: 100px;
+    height: 60%;
+    padding-left: 5%;
+  }
+  form div{
+    align-items: end;
+    grid-column-end: 5;
+    height: 75%;
+    padding-left: 0;
+  }
+  form div>hr{
+    width: 99%;
+  }
+  form div>button{
+    width: 60px;
+    height: 60px;
+  }
+  #age{
+    padding-left: 0;
+  }
+}
+.input-danger{
+  border: 1px solid var(--light-red);
+}
+.text-danger{
+  color: var(--light-red);
+}
+.msg-danger{
+  color: var(--light-red);
+  font-size: 8px;
+  margin-top: 2px;
+}
+.default{
+  display: none;
+}
+.show{
+  display: block;
+}
+.info{
+  margin-top: 0;
+  align-items: start;
+  overflow: hidden;
+  height: 15px;
+  padding: 0;
+  font-family: Poppins;
+  text-transform: initial;
+  font-weight: normal;
+}
+  
